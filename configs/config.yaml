@@ -1,0 +1,18 @@
+defaults:
+  - model/base.yaml
+  - model: stylesv
+
+  # Import dataset common and overwrite it with the custom one
+  - dataset/base.yaml
+  - dataset: sky_timelapse
+
+  - sampling/base.yaml
+  - sampling: random
+
+  - env/base.yaml
+  - env: local
+  - infra.yaml
+  - training/base.yaml
+
+# 默认值，可以被命令行覆盖
+slurm: false
